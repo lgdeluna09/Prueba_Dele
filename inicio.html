@@ -2,56 +2,69 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="./estilos.css">
+<link rel="stylesheet" type="text/css" href="estilos.css">
 <title>PruebaDeleUV</title>
 </head>
 <body>
-  <header>
-    <img alt="logo provisional" width="50" src=imagenes/Logoprovisionalrsef.jpg>
-    <nav>
-      <a href=./inicio.html>inicio</a>
-      <a href=./actividades.html>actividades</a>
-      <a href=./miembros.html>miembros</a>
-      <a href=./contactanos.html>contáctanos</a>
+ <header class="header">
+    <img alt="logo provisional" width="50" src="imagenes/Logoprovisionalrsef.jpg">
+    <nav class="nav-links">
+      <a href="inicio.html">inicio</a>
+      <a href="actividades.html">actividades</a>
+      <a href="miembros.html">miembros</a>
+      <a href="contactanos.html">contáctanos</a>
     </nav>
   </header>
-  <main>
+  </header>
+ <main class="main-content">
     
     <div>
-      <h1>¿Quienes somos?</h1>
-      <div>
-        <h2>RSEF</h2>
-        <p>
-          aquí va texto
-        </p>
-        <a href="https://rsef.es/"  target="_blank">
-          <img src="imagenes/LogoRSEF.jpg" width="250" alt="Logo RSEF">
-        </a>
-      </div>
-      <div>
-        <h2>G de E</h2>
-        <p>
-          aquí más texto
-        </p>
-        <a href="https://estudiantes.rsef.es/"  target="_blank">
-          <img src="imagenes/LogoGdeE.png" width="250" alt="Logo G de E">
-        </a>
-      </div>
-      <div>
-        <h2>Delegación de la UV</h2>
-        <p>
-          y aquí iría más texto
-        </p>
+      <h1 class="section-title">¿Quienes somos?</h1>
+      
+      <!-- Añadimos class="cards-grid" a este contenedor -->
+      <div class="cards-grid">
+        
+        <!-- Añadimos class="card" al primer bloque -->
+        <div class="card">
+          <h2>RSEF</h2>
+          <p>
+            aquí va texto
+          </p>
+          <a href="https://rsef.es/" target="_blank">
+            <img src="imagenes/LogoRSEF.jpg" width="250" alt="Logo RSEF">
+          </a>
+        </div>
+
+        <!-- Añadimos class="card" al segundo bloque -->
+        <div class="card">
+          <h2>G de E</h2>
+          <p>
+            aquí más texto
+          </p>
+          <a href="https://estudiantes.rsef.es/" target="_blank">
+            <img src="imagenes/LogoGdeE.png" width="250" alt="Logo G de E">
+          </a>
+        </div>
+
+        <!-- Añadimos class="card highlight-card" al tercer bloque -->
+        <div class="card highlight-card">
+          <h2>Delegación de la UV</h2>
+          <p>
+            y aquí iría más texto
+          </p>
+        </div>
+
       </div>
     </div>
 
-    <div>
+    <!-- Añadimos class="section-destacada" a este bloque de abajo -->
+    <div class="section-destacada">
       <h1>Titulo genérico</h1>
       <p>Esto es pa tener como un ejemplo de una caja con cosas, supongo que el resto será igual, poner copiar y pegar y eso no se gracias por dedicarte a leer esta tonteria</p>
     </div>
     
   </main>
-  <footer>
+  <footer class="footer">
     <div>
       <p>Supongo que aqúi iran cosas tambien oero coo no se que poner pues ongo esyo (estyo es el pie de pagina por cierto)</p>
     </div>
