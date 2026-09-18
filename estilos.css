@@ -1,1 +1,272 @@
+/* ==========================================================
+   RESET Y CONFIGURACIÓN GENERAL
+   ========================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f8; /* Gris muy claro de fondo */
+  color: #2c3e50;
+}
+
+/* ==========================================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================================== */
+.header {
+  background-color: #0f2537; /* Azul marino profundo */
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo-container img {
+  border-radius: 6px;
+  border: 2px solid #ffd54f; /* Borde amarillo suave */
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #ffd54f; /* Amarillo */
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #2e7d32; /* Verde suave al pasar el cursor */
+  color: #ffd54f; /* Texto amarillo */
+}
+
+.nav-links a.active {
+  border-bottom: 3px solid #ffd54f;
+}
+
+/* ==========================================================
+   CONTENIDO PRINCIPAL Y SECCIONES
+   ========================================================== */
+.main-content {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  text-align: center;
+  color: #0f2537; /* Azul marino */
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #2e7d32; /* Línea verde decorativa */
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Red de tarjetas (Flexbox) */
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+/* Tarjeta estándar */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 5px solid #2e7d32; /* Borde superior verde */
+  border-radius: 10px;
+  padding: 1.8rem;
+  width: 310px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-8px); /* Eleva la tarjeta */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+  color: #0f2537;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.card p {
+  color: #555555;
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  max-height: 90px;
+  object-fit: contain;
+  margin-top: auto;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.card img:hover {
+  transform: scale(1.05); /* Efecto zoom leve a los logos */
+}
+
+/* TARJETA DESTACADA (Uso del Morado Rojizo Oscuro) */
+.card.highlight-card {
+  border-top: 5px solid #ffc107; /* Borde superior amarillo */
+  background: linear-gradient(180deg, #ffffff 0%, #fdf6f9 100%);
+  box-shadow: 0 6px 16px rgba(88, 24, 69, 0.15);
+}
+
+.card.highlight-card h2 {
+  color: #581845; /* Morado rojizo oscuro */
+}
+
+/* ==========================================================
+   SECCIÓN DESTACADA / CAJA ADICIONAL
+   ========================================================== */
+.section-destacada {
+  background-color: #581845; /* Morado rojizo oscuro */
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(88, 24, 69, 0.25);
+  margin-bottom: 2rem;
+}
+
+.section-destacada h2 {
+  color: #ffd54f; /* Amarillo */
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.section-destacada p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
+  font-size: 1.05rem;
+  color: #f3e5f5;
+}
+
+.btn-destacado {
+  background-color: #2e7d32; /* Verde */
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-destacado:hover {
+  background-color: #ffd54f; /* Cambia a amarillo */
+  color: #581845; /* Texto morado */
+  transform: scale(1.05);
+}
+
+/* ==========================================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================================== */
+.footer {
+  background-color: #0f2537; /* Azul marino */
+  color: #ffffff;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border-top: 4px solid #2e7d32; /* Línea verde superior */
+}
+
+.footer-info p {
+  font-size: 0.95rem;
+}
+
+.footer-subtext {
+  color: #94a3b8; /* Gris medio */
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+.footer-social {
+  text-align: right;
+}
+
+.footer-social h3 {
+  font-size: 1rem;
+  color: #ffd54f; /* Amarillo */
+  margin-bottom: 0.5rem;
+}
+
+.footer-social img {
+  transition: transform 0.3s ease;
+  filter: brightness(0) invert(1); /* Pasa el logo a blanco */
+}
+
+.footer-social img:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
+/* RESPONSIVO PARA MÓVILES */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-social {
+    text-align: center;
+  }
+}
