@@ -17,26 +17,25 @@
   </header>
   </header>
   <main class="main-content">
-<h1 class="section-title">Nuestras Actividades</h1>
 
-<!-- Selector Interactivo (CSS Puro) -->
-<div class="tabs-container">
-  <input type="radio" id="tab-proximas" name="actividades-tab" checked>
-  <input type="radio" id="tab-realizadas" name="actividades-tab">
+   
+   
 
-  <div class="tabs-selector">
-    <label for="tab-proximas" class="tab-btn">
-      <span class="dot green-dot"></span> Próximas actividades
-    </label>
-    <label for="tab-realizadas" class="tab-btn">
-      <span class="dot gray-dot"></span> Actividades hechas
-    </label>
-  </div>
 
-  <!-- CONTENIDO 1: Próximas Actividades -->
-  <div class="tab-content content-proximas">
+     <main class="main-content">
+  <h1 class="section-title">Nuestras Actividades</h1>
+
+  <div class="timeline-container">
+
+    <!-- SECCIÓN 1: PRÓXIMAS ACTIVIDADES -->
+    <div class="timeline-header upcoming-header">
+      <div class="circle-badge green-badge">
+        <span class="badge-icon">🚀</span>
+        <span>Próximas</span>
+      </div>
+    </div>
+
     <div class="cards-grid">
-      
       <div class="card activity-card upcoming">
         <span class="badge badge-green">Próximamente</span>
         <h2>Taller de Física Cuántica</h2>
@@ -52,31 +51,37 @@
         <p>Encuentro con profesionales del sector para resolver dudas sobre el grado.</p>
         <a href="contactanos.html" class="btn-activity">Más información</a>
       </div>
-
     </div>
-  </div>
 
-  <!-- CONTENIDO 2: Actividades Realizadas -->
-  <div class="tab-content content-realizadas">
+    <!-- SEPARADOR CREATIVO DE LÍNEA -->
+    <div class="timeline-divider"></div>
+
+    <!-- SECCIÓN 2: ACTIVIDADES REALIZADAS -->
+    <div class="timeline-header done-header">
+      <div class="circle-badge gray-badge">
+        <span class="badge-icon">✅</span>
+        <span>Realizadas</span>
+      </div>
+    </div>
+
     <div class="cards-grid">
-      
       <div class="card activity-card done">
-        <span class="badge badge-gray">Realizada</span>
+        <span class="badge badge-gray">Completada</span>
         <h2>Visita al Observatorio</h2>
         <p class="activity-date">📅 10 de Mayo, 2026</p>
         <p>Salida nocturna para observación astronómica junto a la Delegación.</p>
       </div>
 
       <div class="card activity-card done">
-        <span class="badge badge-gray">Realizada</span>
+        <span class="badge badge-gray">Completada</span>
         <h2>Seminario de Bienvenida</h2>
         <p class="activity-date">📅 20 de Septiembre, 2025</p>
         <p>Presentación de la RSEF y el G de E a los nuevos estudiantes.</p>
       </div>
-
     </div>
+
   </div>
-</div>
+
    
     
   </main>
