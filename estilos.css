@@ -287,97 +287,81 @@ body {
   }
 }
 /* ==========================================================
-   SECTOR DE ACTIVIDADES (PESTAÑAS Y CÁPSULAS)
+   DISEÑO CREATIVO DE ACTIVIDADES (TIMELINE CIRCULAR)
    ========================================================== */
-.tabs-container {
+.timeline-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 3rem;
+  position: relative;
+  margin-top: 1rem;
 }
 
-/* Ocultar los radio inputs */
-.tabs-container input[type="radio"] {
-  display: none;
-}
-
-/* Selector estilizado */
-.tabs-selector {
-  display: inline-flex;
-  background-color: #e2e8f0; /* Gris claro */
-  padding: 6px;
-  border-radius: 40px;
-  gap: 8px;
-  margin-bottom: 2.5rem;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
-}
-
-.tab-btn {
+/* Encabezados con Insignia Circular */
+.timeline-header {
   display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  z-index: 2;
+}
+
+.circle-badge {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding: 0.6rem 1.4rem;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: #2c3e50;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  user-select: none;
-}
-
-/* Indicadores de color en forma de círculo */
-.dot {
-  width: 10px;
-  height: 10px;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
-  display: inline-block;
-}
-
-.green-dot { background-color: #2e7d32; }
-.gray-dot { background-color: #94a3b8; }
-
-/* Transición al pasar el cursor */
-.tab-btn:hover {
-  color: #0f2537;
-}
-
-/* Estado ACTIVO según el radio button seleccionado */
-#tab-proximas:checked ~ .tabs-selector label[for="tab-proximas"],
-#tab-realizadas:checked ~ .tabs-selector label[for="tab-realizadas"] {
-  background-color: #0f2537; /* Azul marino */
   color: #ffffff;
-  box-shadow: 0 4px 10px rgba(15, 37, 55, 0.25);
+  font-weight: bold;
+  font-size: 0.95rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
-/* Lógica de visibilidad del contenido */
-.tab-content {
-  display: none;
-  width: 100%;
+.circle-badge:hover {
+  transform: scale(1.08);
 }
 
-#tab-proximas:checked ~ .content-proximas {
-  display: block;
+.badge-icon {
+  font-size: 1.6rem;
+  margin-bottom: 2px;
 }
 
-#tab-realizadas:checked ~ .content-realizadas {
-  display: block;
+/* Colores de las insignias */
+.green-badge {
+  background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+  border: 4px solid #ffffff;
 }
 
-/* Estilos de las tarjetas de actividades */
+.gray-badge {
+  background: linear-gradient(135deg, #0f2537 0%, #334155 100%);
+  border: 4px solid #ffffff;
+}
+
+/* Línea conectora entre secciones */
+.timeline-divider {
+  width: 4px;
+  height: 60px;
+  background: linear-gradient(180deg, #2e7d32 0%, #0f2537 100%);
+  margin: 1rem 0 2rem 0;
+  border-radius: 2px;
+}
+
+/* Estilos específicos de tarjetas */
 .activity-card {
   text-align: left;
-  position: relative;
-  border-top-width: 4px;
+  border-top-width: 5px;
 }
 
 .activity-card.upcoming {
-  border-top-color: #2e7d32; /* Verde */
+  border-top-color: #2e7d32;
 }
 
 .activity-card.done {
-  border-top-color: #94a3b8; /* Gris */
-  opacity: 0.9;
+  border-top-color: #0f2537;
+  background-color: #f8fafc;
 }
 
 .badge {
@@ -396,8 +380,8 @@ body {
 }
 
 .badge-gray {
-  background-color: #f1f5f9;
-  color: #64748b;
+  background-color: #e2e8f0;
+  color: #0f2537;
 }
 
 .activity-date {
