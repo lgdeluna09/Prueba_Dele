@@ -287,124 +287,195 @@ body {
   }
 }
 /* ==========================================================
-   DISEÑO CREATIVO DE ACTIVIDADES (TIMELINE CIRCULAR)
+   DISEÑO MODERNO DE ACTIVIDADES (SWITCH FLOTANTE & GLASS)
    ========================================================== */
-.timeline-container {
+
+.switch-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+
+/* Ocultar radios */
+.switch-wrapper input[type="radio"] {
+  display: none;
+}
+
+/* Contenedor del selector estilo cápsula */
+.switch-container {
   position: relative;
-  margin-top: 1rem;
-}
-
-/* Encabezados con Insignia Circular */
-.timeline-header {
   display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-  z-index: 2;
+  background-color: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 50px;
+  padding: 5px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 15px rgba(15, 37, 55, 0.08);
+  overflow: hidden;
 }
 
-.circle-badge {
+.switch-option {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.7rem 1.6rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #0f2537;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+/* Fondo deslizante del botón */
+.switch-slider {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  width: calc(50% - 5px);
+  background-color: #0f2537;
+  border-radius: 40px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+/* Luces de estado (LED Pulse) */
+.status-pulse {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.pulse-green {
+  background-color: #2e7d32;
+  box-shadow: 0 0 8px #2e7d32;
+}
+
+.pulse-gray {
+  background-color: #94a3b8;
+}
+
+/* Lógica de cambio del switch y texto */
+#show-upcoming:checked ~ .switch-container .switch-slider {
+  transform: translateX(0);
+}
+
+#show-past:checked ~ .switch-container .switch-slider {
+  transform: translateX(100%);
+}
+
+#show-upcoming:checked ~ .switch-container label[for="show-upcoming"],
+#show-past:checked ~ .switch-container label[for="show-past"] {
+  color: #ffffff;
+}
+
+/* Transición y visibilidad de los paneles */
+.activities-panel {
+  display: none;
+  width: 100%;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+#show-upcoming:checked ~ .panel-upcoming {
+  display: block;
+}
+
+#show-past:checked ~ .panel-past {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tarjetas modernas */
+.modern-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.8rem;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Barra lateral de color */
+.card-status-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+}
+
+.upcoming-card .card-status-bar {
+  background-color: #2e7d32; /* Verde */
+}
+
+.past-card .card-status-bar {
+  background-color: #0f2537; /* Azul Marino */
+}
+
+.card-header-flex {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 0.95rem;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+  margin-bottom: 1rem;
 }
 
-.circle-badge:hover {
-  transform: scale(1.08);
-}
-
-.badge-icon {
-  font-size: 1.6rem;
-  margin-bottom: 2px;
-}
-
-/* Colores de las insignias */
-.green-badge {
-  background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
-  border: 4px solid #ffffff;
-}
-
-.gray-badge {
-  background: linear-gradient(135deg, #0f2537 0%, #334155 100%);
-  border: 4px solid #ffffff;
-}
-
-/* Línea conectora entre secciones */
-.timeline-divider {
-  width: 4px;
-  height: 60px;
-  background: linear-gradient(180deg, #2e7d32 0%, #0f2537 100%);
-  margin: 1rem 0 2rem 0;
-  border-radius: 2px;
-}
-
-/* Estilos específicos de tarjetas */
-.activity-card {
-  text-align: left;
-  border-top-width: 5px;
-}
-
-.activity-card.upcoming {
-  border-top-color: #2e7d32;
-}
-
-.activity-card.done {
-  border-top-color: #0f2537;
-  background-color: #f8fafc;
-}
-
-.badge {
-  align-self: flex-start;
+.tag {
   font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
-  margin-bottom: 0.8rem;
+  font-weight: 800;
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.badge-green {
+.tag-upcoming {
   background-color: #e8f5e9;
   color: #2e7d32;
 }
 
-.badge-gray {
+.tag-past {
   background-color: #e2e8f0;
   color: #0f2537;
 }
 
-.activity-date {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #2e7d32;
-  margin-bottom: 0.6rem !important;
-}
-
-.btn-activity {
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: #0f2537;
-  color: #ffffff;
-  padding: 0.5rem 1rem;
+.date-chip {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #555555;
+  background-color: #f8fafc;
+  padding: 0.25rem 0.6rem;
   border-radius: 6px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-align: center;
-  transition: background-color 0.2s ease;
+  border: 1px solid #e2e8f0;
 }
 
-.btn-activity:hover {
+.btn-action {
+  margin-top: 1.2rem;
   background-color: #2e7d32;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);
+}
+
+.btn-action:hover {
+  background-color: #ffd54f;
+  color: #0f2537;
+  transform: translateY(-2px);
 }
