@@ -287,140 +287,73 @@ body {
   }
 }
 /* ==========================================================
-   DISEÑO MODERNO DE ACTIVIDADES (SWITCH FLOTANTE & GLASS)
+   ACTIVIDADES EN MISMA PÁGINA (BORDES VERDE Y AZUL)
    ========================================================== */
 
-.switch-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-/* Ocultar radios */
-.switch-wrapper input[type="radio"] {
-  display: none;
-}
-
-/* Contenedor del selector estilo cápsula */
-.switch-container {
-  position: relative;
-  display: flex;
-  background-color: #ffffff;
-  border: 2px solid #e2e8f0;
-  border-radius: 50px;
-  padding: 5px;
+.activities-section {
   margin-bottom: 2.5rem;
-  box-shadow: 0 4px 15px rgba(15, 37, 55, 0.08);
-  overflow: hidden;
 }
 
-.switch-option {
-  position: relative;
-  z-index: 2;
+.section-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 0.7rem 1.6rem;
-  font-weight: 700;
-  font-size: 0.95rem;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
   color: #0f2537;
-  cursor: pointer;
-  transition: color 0.3s ease;
-  user-select: none;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
-/* Fondo deslizante del botón */
-.switch-slider {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  bottom: 5px;
-  width: calc(50% - 5px);
-  background-color: #0f2537;
-  border-radius: 40px;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1;
-}
-
-/* Luces de estado (LED Pulse) */
-.status-pulse {
-  width: 9px;
-  height: 9px;
+/* Indicadores circulares luminosos */
+.status-dot {
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   display: inline-block;
 }
 
-.pulse-green {
+.green-dot {
   background-color: #2e7d32;
-  box-shadow: 0 0 8px #2e7d32;
+  box-shadow: 0 0 8px rgba(46, 125, 50, 0.6);
 }
 
-.pulse-gray {
-  background-color: #94a3b8;
+.blue-dot {
+  background-color: #0f2537;
+  box-shadow: 0 0 8px rgba(15, 37, 55, 0.4);
 }
 
-/* Lógica de cambio del switch y texto */
-#show-upcoming:checked ~ .switch-container .switch-slider {
-  transform: translateX(0);
+/* Separador elegante entre ambas secciones */
+.section-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+  margin: 3rem 0;
 }
 
-#show-past:checked ~ .switch-container .switch-slider {
-  transform: translateX(100%);
-}
-
-#show-upcoming:checked ~ .switch-container label[for="show-upcoming"],
-#show-past:checked ~ .switch-container label[for="show-past"] {
-  color: #ffffff;
-}
-
-/* Transición y visibilidad de los paneles */
-.activities-panel {
-  display: none;
-  width: 100%;
-  animation: fadeIn 0.4s ease forwards;
-}
-
-#show-upcoming:checked ~ .panel-upcoming {
-  display: block;
-}
-
-#show-past:checked ~ .panel-past {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Tarjetas modernas */
-.modern-card {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
+/* Estilos de las tarjetas con sus bordes */
+.activity-card {
+  text-align: left;
+  border-radius: 10px;
   padding: 1.8rem;
-  background: #ffffff;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
 }
 
-/* Barra lateral de color */
-.card-status-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 100%;
+/* Próximas: Borde completo y superior verde */
+.upcoming-card {
+  border: 2px solid #2e7d32;
+  border-top: 6px solid #2e7d32;
 }
 
-.upcoming-card .card-status-bar {
-  background-color: #2e7d32; /* Verde */
-}
-
-.past-card .card-status-bar {
-  background-color: #0f2537; /* Azul Marino */
+/* Hechas: Borde completo y superior azul marino */
+.past-card {
+  border: 2px solid #0f2537;
+  border-top: 6px solid #0f2537;
+  background-color: #fdfdfe;
 }
 
 .card-header-flex {
