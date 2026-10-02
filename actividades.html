@@ -17,12 +17,67 @@
   </header>
   </header>
   <main class="main-content">
+<h1 class="section-title">Nuestras Actividades</h1>
 
-    <!-- Añadimos class="section-destacada" a este bloque de abajo -->
-    <div class="section-destacada">
-      <h1>Titulo genérico</h1>
-      <p>Esto es pa tener como un ejemplo de una caja con cosas, supongo que el resto será igual, poner copiar y pegar y eso no se gracias por dedicarte a leer esta tonteria</p>
+<!-- Selector Interactivo (CSS Puro) -->
+<div class="tabs-container">
+  <input type="radio" id="tab-proximas" name="actividades-tab" checked>
+  <input type="radio" id="tab-realizadas" name="actividades-tab">
+
+  <div class="tabs-selector">
+    <label for="tab-proximas" class="tab-btn">
+      <span class="dot green-dot"></span> Próximas actividades
+    </label>
+    <label for="tab-realizadas" class="tab-btn">
+      <span class="dot gray-dot"></span> Actividades hechas
+    </label>
+  </div>
+
+  <!-- CONTENIDO 1: Próximas Actividades -->
+  <div class="tab-content content-proximas">
+    <div class="cards-grid">
+      
+      <div class="card activity-card upcoming">
+        <span class="badge badge-green">Próximamente</span>
+        <h2>Taller de Física Cuántica</h2>
+        <p class="activity-date">📅 15 de Noviembre, 2026</p>
+        <p>Charla introductoria y experimentos en vivo en el campus de la UV.</p>
+        <a href="contactanos.html" class="btn-activity">Inscribirse</a>
+      </div>
+
+      <div class="card activity-card upcoming">
+        <span class="badge badge-green">Próximamente</span>
+        <h2>Mesa Redonda: Futuro Laboral</h2>
+        <p class="activity-date">📅 3 de Diciembre, 2026</p>
+        <p>Encuentro con profesionales del sector para resolver dudas sobre el grado.</p>
+        <a href="contactanos.html" class="btn-activity">Más información</a>
+      </div>
+
     </div>
+  </div>
+
+  <!-- CONTENIDO 2: Actividades Realizadas -->
+  <div class="tab-content content-realizadas">
+    <div class="cards-grid">
+      
+      <div class="card activity-card done">
+        <span class="badge badge-gray">Realizada</span>
+        <h2>Visita al Observatorio</h2>
+        <p class="activity-date">📅 10 de Mayo, 2026</p>
+        <p>Salida nocturna para observación astronómica junto a la Delegación.</p>
+      </div>
+
+      <div class="card activity-card done">
+        <span class="badge badge-gray">Realizada</span>
+        <h2>Seminario de Bienvenida</h2>
+        <p class="activity-date">📅 20 de Septiembre, 2025</p>
+        <p>Presentación de la RSEF y el G de E a los nuevos estudiantes.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+   
     
   </main>
   <footer class="footer">
