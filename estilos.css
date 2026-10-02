@@ -286,3 +286,141 @@ body {
     height: 1100px;
   }
 }
+/* ==========================================================
+   SECTOR DE ACTIVIDADES (PESTAÑAS Y CÁPSULAS)
+   ========================================================== */
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+/* Ocultar los radio inputs */
+.tabs-container input[type="radio"] {
+  display: none;
+}
+
+/* Selector estilizado */
+.tabs-selector {
+  display: inline-flex;
+  background-color: #e2e8f0; /* Gris claro */
+  padding: 6px;
+  border-radius: 40px;
+  gap: 8px;
+  margin-bottom: 2.5rem;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #2c3e50;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+/* Indicadores de color en forma de círculo */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.green-dot { background-color: #2e7d32; }
+.gray-dot { background-color: #94a3b8; }
+
+/* Transición al pasar el cursor */
+.tab-btn:hover {
+  color: #0f2537;
+}
+
+/* Estado ACTIVO según el radio button seleccionado */
+#tab-proximas:checked ~ .tabs-selector label[for="tab-proximas"],
+#tab-realizadas:checked ~ .tabs-selector label[for="tab-realizadas"] {
+  background-color: #0f2537; /* Azul marino */
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(15, 37, 55, 0.25);
+}
+
+/* Lógica de visibilidad del contenido */
+.tab-content {
+  display: none;
+  width: 100%;
+}
+
+#tab-proximas:checked ~ .content-proximas {
+  display: block;
+}
+
+#tab-realizadas:checked ~ .content-realizadas {
+  display: block;
+}
+
+/* Estilos de las tarjetas de actividades */
+.activity-card {
+  text-align: left;
+  position: relative;
+  border-top-width: 4px;
+}
+
+.activity-card.upcoming {
+  border-top-color: #2e7d32; /* Verde */
+}
+
+.activity-card.done {
+  border-top-color: #94a3b8; /* Gris */
+  opacity: 0.9;
+}
+
+.badge {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.badge-green {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.badge-gray {
+  background-color: #f1f5f9;
+  color: #64748b;
+}
+
+.activity-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 0.6rem !important;
+}
+
+.btn-activity {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #0f2537;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.btn-activity:hover {
+  background-color: #2e7d32;
+}
