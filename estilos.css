@@ -404,7 +404,6 @@ body {
   background: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 /* Barra lateral de color */
@@ -458,24 +457,4 @@ body {
   padding: 0.25rem 0.6rem;
   border-radius: 6px;
   border: 1px solid #e2e8f0;
-}
-
-.btn-action {
-  margin-top: 1.2rem;
-  background-color: #2e7d32;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.9rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);
-}
-
-.btn-action:hover {
-  background-color: #ffd54f;
-  color: #0f2537;
-  transform: translateY(-2px);
 }
