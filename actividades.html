@@ -18,87 +18,72 @@
   </header>
   <main class="main-content">
 
-   
-   
-
-
-     <main class="main-content">
-<main class="main-content">
  <main class="main-content">
-  <h1 class="section-title">Nuestras Actividades</h1>
-
-  <!-- Selector estilo Toggle Flotante -->
-  <div class="switch-wrapper">
-    <input type="radio" id="show-upcoming" name="activity-toggle" checked>
-    <input type="radio" id="show-past" name="activity-toggle">
-
-    <div class="switch-container">
-      <label for="show-upcoming" class="switch-option">
-        <span class="status-pulse pulse-green"></span>
-        Próximas Actividades
-      </label>
-      <label for="show-past" class="switch-option">
-        <span class="status-pulse pulse-gray"></span>
-        Actividades Hechas
-      </label>
-      <div class="switch-slider"></div>
+  
+  <!-- SECCIÓN 1: PRÓXIMAS ACTIVIDADES -->
+  <section class="activities-section">
+    <div class="section-header">
+      <span class="status-dot green-dot"></span>
+      <h2>Próximas Actividades</h2>
     </div>
 
-    <!-- BLOQUE 1: PRÓXIMAS ACTIVIDADES -->
-    <div class="activities-panel panel-upcoming">
-      <div class="cards-grid">
-
-        <div class="card modern-card upcoming-card">
-          <div class="card-status-bar"></div>
-          <div class="card-header-flex">
-            <span class="tag tag-upcoming">Próximamente</span>
-            <span class="date-chip">📅 15 NOV 2026</span>
-          </div>
-          <h2>Taller de Física Cuántica</h2>
-          <p>Charla introductoria y experimentos en vivo en el campus de la UV con material interactivo.</p>
+    <div class="cards-grid">
+      
+      <div class="card activity-card upcoming-card">
+        <div class="card-header-flex">
+          <span class="tag tag-upcoming">Próximamente</span>
+          <span class="date-chip">📅 15 NOV 2026</span>
         </div>
-
-        <div class="card modern-card upcoming-card">
-          <div class="card-status-bar"></div>
-          <div class="card-header-flex">
-            <span class="tag tag-upcoming">Próximamente</span>
-            <span class="date-chip">📅 03 DIC 2026</span>
-          </div>
-          <h2>Mesa Redonda: Futuro Laboral</h2>
-          <p>Encuentro con profesionales e investigadores del sector para resolver dudas sobre salidas del grado.</p>
-        </div>
-
+        <h2>Taller de Física Cuántica</h2>
+        <p>Charla introductoria y experimentos en vivo en el campus de la UV con material interactivo.</p>
       </div>
-    </div>
 
-    <!-- BLOQUE 2: ACTIVIDADES REALIZADAS -->
-    <div class="activities-panel panel-past">
-      <div class="cards-grid">
-
-        <div class="card modern-card past-card">
-          <div class="card-status-bar"></div>
-          <div class="card-header-flex">
-            <span class="tag tag-past">Realizada</span>
-            <span class="date-chip">📅 10 MAY 2026</span>
-          </div>
-          <h2>Visita al Observatorio</h2>
-          <p>Salida nocturna para observación astronómica y talleres prácticos junto a la Delegación.</p>
+      <div class="card activity-card upcoming-card">
+        <div class="card-header-flex">
+          <span class="tag tag-upcoming">Próximamente</span>
+          <span class="date-chip">📅 03 DIC 2026</span>
         </div>
-
-        <div class="card modern-card past-card">
-          <div class="card-status-bar"></div>
-          <div class="card-header-flex">
-            <span class="tag tag-past">Realizada</span>
-            <span class="date-chip">📅 20 SEP 2025</span>
-          </div>
-          <h2>Seminario de Bienvenida</h2>
-          <p>Presentación de la RSEF y el Grupo de Estudiantes a los nuevos alumnos de la facultad.</p>
-        </div>
-
+        <h2>Mesa Redonda: Futuro Laboral</h2>
+        <p>Encuentro con profesionales e investigadores del sector para resolver dudas sobre salidas del grado.</p>
       </div>
+
+    </div>
+  </section>
+
+  <!-- SEPARADOR DECORATIVO -->
+  <hr class="section-divider">
+
+  <!-- SECCIÓN 2: ACTIVIDADES REALIZADAS -->
+  <section class="activities-section">
+    <div class="section-header">
+      <span class="status-dot blue-dot"></span>
+      <h2>Actividades Hechas</h2>
     </div>
 
-  </div>
+    <div class="cards-grid">
+
+      <div class="card activity-card past-card">
+        <div class="card-header-flex">
+          <span class="tag tag-past">Realizada</span>
+          <span class="date-chip">📅 10 MAY 2026</span>
+        </div>
+        <h2>Visita al Observatorio</h2>
+        <p>Salida nocturna para observación astronómica y talleres prácticos junto a la Delegación.</p>
+      </div>
+
+      <div class="card activity-card past-card">
+        <div class="card-header-flex">
+          <span class="tag tag-past">Realizada</span>
+          <span class="date-chip">📅 20 SEP 2025</span>
+        </div>
+        <h2>Seminario de Bienvenida</h2>
+        <p>Presentación de la RSEF y el Grupo de Estudiantes a los nuevos alumnos de la facultad.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
 </main>
 
    
