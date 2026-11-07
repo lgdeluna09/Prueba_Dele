@@ -392,9 +392,9 @@ body {
   border: 1px solid #e2e8f0;
 }
 .foto-destacada {
-  width: 90%;       /* Ocupa el 80% del ancho del recuadro, dejando un pequeño margen estético a los lados */
-  max-width: 400px; /* Evita que crezca demasiado en pantallas grandes (puedes ajustar este número a tu gusto) */
-  height: auto;     /* Mantiene la proporción original para que la foto no se deforme */
-  display: block;   /* Convierte la imagen en bloque */
-  margin: 15px auto;/* Centra la imagen horizontalmente y le da un poco de espacio arriba y abajo */
+  width: 90%;       /* Ocupa casi todo el ancho de la tarjeta (95%) */
+  max-width: 650px; /* Aumentamos el límite máximo para que pueda hacerse mucho más grande */
+  height: auto;     /* Mantiene la proporción para que no se deforme */
+  display: block;   
+  margin: 15px auto;/* Centrada y separada del texto */
 }
