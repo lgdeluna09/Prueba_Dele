@@ -398,3 +398,12 @@ body {
   display: block;   
   margin: 15px auto;/* Centrada y separada del texto */
 }
+video {
+  display: block;
+  width: 100%;
+  max-width: 800px;       /* Evita que se haga gigante en monitores grandes */
+  height: auto;           /* Mantiene la proporción original sin deformarse */
+  margin: 20px auto;      /* Lo centra horizontalmente y le da espacio arriba y abajo */
+  border-radius: 12px;    /* Redondea ligeramente las esquinas para un look más moderno */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra suave para que destaque del fondo */
+}
