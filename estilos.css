@@ -398,12 +398,44 @@ body {
   display: block;   
   margin: 15px auto;/* Centrada y separada del texto */
 }
-video {
+/* Contenedor principal del vídeo */
+.caja-video {
+  background: linear-gradient(135deg, #f4f8fb 0%, #e6f0f9 100%); /* Fondo degradado azul muy suave */
+  border-left: 6px solid #0056b3; /* Barra lateral llamativa */
+  border-radius: 12px;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 900px;
+  box-shadow: 0 8px 20px rgba(0, 86, 179, 0.08);
+  text-align: center; /* Centra el título y el texto */
+}
+
+/* Estilo del título de la sección */
+.caja-video h2 {
+  color: #003d82;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+/* Estilo del párrafo explicativo */
+.caja-video p {
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 700px; /* Evita que las líneas de texto sean demasiado largas */
+  margin: 0 auto 25px auto;
+}
+
+/* Estilo del reproductor de vídeo */
+.caja-video video {
   display: block;
   width: 100%;
-  max-width: 800px;
+  max-width: 750px;
   height: auto;
-  margin: 20px auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 2px solid #ffffff; /* Marco blanco fino alrededor del vídeo */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
