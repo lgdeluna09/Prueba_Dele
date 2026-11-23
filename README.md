@@ -10,4 +10,9 @@ miembros\
 Valenbciano/Castellano?\
 Actulizar Logo\
 Añadir imágenes\ 
-AÑadir cosas aqi xd
+
+
+Pie de página global ubicado en main.js\
+Encabezado de página global también en main.js\
+Logos para redes sociales en flaticon.com
+

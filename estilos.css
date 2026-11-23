@@ -439,3 +439,23 @@ body {
   border: 2px solid #ffffff; /* Marco blanco fino alrededor del vídeo */
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Separación entre iconos */
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-links img {
+  height: 40px; /* Misma altura para ambos */
+  width: auto;  /* Mantiene la proporción original sin deformar */
+  object-fit: contain;
+}
+.social-links img[src*="LogoX"] {
+  transform: scale(1.38);
+}
