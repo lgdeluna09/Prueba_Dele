@@ -10,6 +10,12 @@ if (headerPlaceholder) {
         <a href="miembros.html">Miembros</a>
         <a href="contactanos.html">Contáctanos</a>
       </nav>
+      <div class="lang-switch">
+        <button type="button" class="lang-btn notranslate" onclick="cambiarIdioma('es')">ES</button>
+        <span class="lang-sep">|</span>
+        <button type="button" class="lang-btn notranslate" onclick="cambiarIdioma('ca')">VA</button>
+      </div>
+      <div id="google_translate_element" style="display:none;"></div>
     </header>
   `;
 }
@@ -35,4 +41,38 @@ if (footerPlaceholder) {
       </div>
     </footer>
   `;
+}
+
+// ==========================================================
+// TRADUCCIÓN AUTOMÁTICA CON GOOGLE TRANSLATE
+// ==========================================================
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'es',
+    includedLanguages: 'es,ca',
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+
+// Cargar el script oficial de Google
+const gtScript = document.createElement('script');
+gtScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+document.body.appendChild(gtScript);
+
+// Función que activan tus botones ES / VA
+function cambiarIdioma(idioma) {
+  const selector = document.querySelector('.goog-te-combo');
+  
+  if (idioma === 'es') {
+    // Restaurar idioma original (castellano)
+    document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    if (selector) {
+      selector.value = 'es';
+      selector.dispatchEvent(new Event('change'));
+    }
+    location.reload();
+  } else if (selector) {
+    selector.value = idioma;
+    selector.dispatchEvent(new Event('change'));
+  }
 }
